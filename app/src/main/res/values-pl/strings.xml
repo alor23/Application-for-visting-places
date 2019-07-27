@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Licencjat</string>
+    <string name="close">Zamknij</string>
+    <string name="show_on_map">Pokaż na mapie</string>
+    <string name="back">Wróć</string>
+    <string name="register">Zarejestruj</string>
+    <string name="login">Zaloguj</string>
+    <string name="password">Hasło</string>
+    <string name="user_name">Nazwa użytkownika</string>
+    <string name="ranking">Ranking</string>
+    <string name="places">Miejsca</string>
+    <string name="logout">Wyloguj</string>
+    <string name="position">Miejsce</string>
+    <string name="points">Punkty</string>
+    <string name="place">Miejsce</string>
+    <string name="read_more">Aby dowiedzieć się więcej kliknij w okienko</string>
+    <string name="spodek">Spodek</string>
+    <string name="register_succes">Zarejestrowano poprawnie</string>
+    <string name="register_failure">Rejestracja zakończona niepowodzeniem</string>
+    <string name="error_conncection_db">Brak połączenia z serwerem</string>
+    <string name="wrong_password">Nie prawidłowa nazwa użytkownika lub hasło</string>
+    <string name="wait">Proszę czekać</string>
+    <string name="register_fill">Proszę wypełnić oba pola</string>
+    <string name="register_user_in_db">Nazwa użytkownika istnieje w bazie</string>
+    <string name="tower">Wieża spadochronowa</string>
+    <string name="theatre">Teatr Śląski</string>
+    <string name="cnti">CNTI</string>
+    <string name="Cathedral">Archikatedra Chrystusa Króla</string>
+    <string name="visited_succes">Odwiedzono</string>
+    <string name="visited_already">Miejsce zostało już odwiedzone</string>
+</resources>

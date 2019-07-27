@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <EditText
+        android:id="@+id/user"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:ems="10"
+        android:hint="@string/user_name"
+        android:inputType="textPersonName"
+        android:textColor="@android:color/black" />
+
+    <EditText
+        android:id="@+id/password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/user"
+        android:allowUndo="true"
+        android:ems="10"
+        android:hint="@string/password"
+        android:inputType="textPassword"
+        android:textColor="@android:color/black" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/password"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_signup"
+            style="@style/Widget.AppCompat.Button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="Register"
+            android:text="@string/register"
+            android:textColor="@android:color/black" />
+
+        <Button
+            android:id="@+id/btn_back"
+            style="@style/Widget.AppCompat.Button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="Back"
+            android:text="@string/back"
+            android:textColor="@android:color/black" />
+    </LinearLayout>
+
+</RelativeLayout>

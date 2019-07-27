@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Licencjat</string>
+    <string name="close">Close</string>
+    <string name="show_on_map">Show on map</string>
+    <string name="back">Back</string>
+    <string name="register">Register</string>
+    <string name="login">Login</string>
+    <string name="password">Password</string>
+    <string name="user_name">User name</string>
+    <string name="ranking">Ranking</string>
+    <string name="places">Places</string>
+    <string name="logout">Logout</string>
+    <string name="position">Position</string>
+    <string name="points">Points</string>
+    <string name="place">Place</string>
+    <string name="read_more">To find out more, click on the box</string>
+    <string name="spodek">Spodek</string>
+    <string name="register_succes">Registered successfully</string>
+    <string name="register_failure">Registration failed</string>
+    <string name="error_conncection_db">No connection to the server</string>
+    <string name="wrong_password">Wrong password or username</string>
+    <string name="wait">Please wait</string>
+    <string name="register_fill">Please fill both fields</string>
+    <string name="register_user_in_db">The username exists in the database</string>
+    <string name="tower">Parachute Tower</string>
+    <string name="theatre">Silesian Theatre</string>
+    <string name="cnti">CNTI</string>
+    <string name="Cathedral">Cathedral of Christ the King</string>
+    <string name="visited_succes">Visited</string>
+    <string name="visited_already">Place already visited</string>
+</resources>
