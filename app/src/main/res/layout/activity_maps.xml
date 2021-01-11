@@ -9,146 +9,17 @@
         android:id="@+id/places_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="#113972"
         android:visibility="gone">
 
-        <LinearLayout
-            android:id="@+id/back"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
-
-            <Button
-                android:id="@+id/btn_back"
-                style="@style/Widget.AppCompat.Button"
-                android:layout_width="wrap_content"
-                android:layout_height="0dp"
-                android:layout_gravity="end"
-                android:layout_weight="1"
-                android:onClick="Back"
-                android:text="@string/close"
-                android:textColor="@android:color/black" />
-        </LinearLayout>
-
-        <RelativeLayout
-            android:id="@+id/spodek"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/cathedral">
-
-            <Button
-                android:id="@+id/btn_spodek"
-                style="@style/Widget.AppCompat.Button"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentEnd="true"
-                android:elevation="0dp"
-                android:onClick="Show_on_map"
-                android:tag="Spodek"
-                android:text="@string/show_on_map"
-                android:textAllCaps="false"
-                android:textColor="@android:color/black" />
-
-            <TextView
-                android:id="@+id/txt_spodek"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentEnd="false"
-                android:layout_centerInParent="false"
-                android:layout_centerVertical="true"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
-                android:text="@string/spodek"
-                android:textColor="@android:color/black"
-                android:textSize="20sp" />
-        </RelativeLayout>
-
-        <RelativeLayout
-            android:id="@+id/tower"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/theatre">
-
-            <Button
-                android:id="@+id/btn_tower"
-                style="@style/Widget.AppCompat.Button"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentEnd="true"
-                android:elevation="0dp"
-                android:onClick="Show_on_map"
-                android:tag="Wieza spadochronowa"
-                android:text="@string/show_on_map"
-                android:textAllCaps="false"
-                android:textColor="@android:color/black" />
-
-            <TextView
-                android:id="@+id/txt_tower"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentEnd="false"
-                android:layout_centerInParent="false"
-                android:layout_centerVertical="true"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
-                android:text="@string/tower"
-                android:textColor="@android:color/black"
-                android:textSize="20sp" />
-        </RelativeLayout>
-
-        <RelativeLayout
-            android:id="@+id/theatre"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/spodek">
-
-            <Button
-                android:id="@+id/btn_theatre"
-                style="@style/Widget.AppCompat.Button"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentEnd="true"
-                android:elevation="0dp"
-                android:onClick="Show_on_map"
-                android:tag="Teatr Slaski"
-                android:text="@string/show_on_map"
-                android:textAllCaps="false"
-                android:textColor="@android:color/black" />
-
-            <TextView
-                android:id="@+id/txt_theatre"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentEnd="false"
-                android:layout_centerInParent="false"
-                android:layout_centerVertical="true"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
-                android:text="@string/theatre"
-                android:textColor="@android:color/black"
-                android:textSize="20sp" />
-        </RelativeLayout>
-
-        <RelativeLayout
+        <android.support.v7.widget.LinearLayoutCompat
             android:id="@+id/cnti"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/back">
-
-            <Button
-                android:id="@+id/btn_cnti"
-                style="@style/Widget.AppCompat.Button"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentEnd="true"
-                android:elevation="0dp"
-                android:onClick="Show_on_map"
-                android:tag="CNTI"
-                android:text="@string/show_on_map"
-                android:textAllCaps="false"
-                android:textColor="@android:color/black" />
+            android:layout_below="@id/rektorat"
+            android:paddingTop="5dp"
+            android:paddingRight="5dp"
+            android:paddingBottom="5dp">
 
             <TextView
                 android:id="@+id/txt_cnti"
@@ -160,32 +31,58 @@
                 android:layout_centerVertical="true"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
+                android:layout_weight="2"
+                android:padding="3dp"
                 android:text="@string/cnti"
-                android:textColor="@android:color/black"
+                android:textColor="#FFFFFF"
                 android:textSize="20sp" />
-        </RelativeLayout>
-
-        <RelativeLayout
-            android:id="@+id/cathedral"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/cnti">
 
             <Button
-                android:id="@+id/btn_cathedral"
+                android:id="@+id/btn_cnti"
                 style="@style/Widget.AppCompat.Button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentEnd="true"
+                android:layout_marginTop="15dp"
+                android:background="#FFFFFF"
                 android:elevation="0dp"
                 android:onClick="Show_on_map"
-                android:tag="Archikatedra Chrystusa Krola"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:tag="Centrum Nowoczesnych Technologii Informatycznych"
+                android:text="@string/show_on_map"
+                android:textAllCaps="false"
+                android:textColor="@android:color/black" />
+
+        </android.support.v7.widget.LinearLayoutCompat>
+
+        <RelativeLayout
+            android:id="@+id/rektorat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/back"
+            android:paddingTop="5dp"
+            android:paddingRight="5dp"
+            android:paddingBottom="5dp">
+
+            <Button
+                android:id="@+id/btn_Rektorat"
+                style="@style/Widget.AppCompat.Button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:background="#FFFFFF"
+                android:elevation="0dp"
+                android:onClick="Show_on_map"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:tag="Rektorat UE"
                 android:text="@string/show_on_map"
                 android:textAllCaps="false"
                 android:textColor="@android:color/black" />
 
             <TextView
-                android:id="@+id/txt_cathedral"
+                android:id="@+id/txt_rektorat"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentStart="true"
@@ -194,16 +91,398 @@
                 android:layout_centerVertical="true"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
-                android:text="@string/Cathedral"
-                android:textColor="@android:color/black"
+                android:text="@string/rektorat"
+                android:textColor="#FFFFFF"
                 android:textSize="20sp" />
         </RelativeLayout>
 
+        <android.support.v7.widget.LinearLayoutCompat
+            android:id="@+id/Cniba"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/cnti"
+            android:paddingTop="5dp"
+            android:paddingRight="5dp"
+            android:paddingBottom="5dp">
+
+            <TextView
+                android:id="@+id/txt_cniba"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="false"
+                android:layout_centerInParent="false"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight="5"
+                android:padding="2dp"
+                android:text="@string/cniba"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp" />
+
+            <Button
+                android:id="@+id/btn_Cniba"
+                style="@style/Widget.AppCompat.Button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="15dp"
+                android:background="#FFFFFF"
+                android:elevation="0dp"
+                android:onClick="Show_on_map"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:tag="Centrum Informacji Naukowej i Biblioteka Akademick"
+                android:text="@string/show_on_map"
+                android:textAllCaps="false"
+                android:textColor="@android:color/black" />
+        </android.support.v7.widget.LinearLayoutCompat>
+
+        <RelativeLayout
+            android:id="@+id/dworzec"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/Cniba"
+            android:paddingTop="5dp"
+            android:paddingRight="5dp"
+            android:paddingBottom="5dp">
+
+            <Button
+                android:id="@+id/btn_dworzec"
+                style="@style/Widget.AppCompat.Button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:background="#FFFFFF"
+                android:elevation="0dp"
+                android:onClick="Show_on_map"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:tag="Dworzec Katowice"
+                android:text="@string/show_on_map"
+                android:textAllCaps="false"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/txt_dworzec"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="false"
+                android:layout_centerInParent="false"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:text="@string/dworzec"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="5dp"
+            android:paddingRight="5dp"
+            android:paddingBottom="5dp">
+
+            <Button
+                android:id="@+id/btn_back"
+                style="@style/Widget.AppCompat.Button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#FFFFFF"
+                android:onClick="Back"
+                android:text="@string/close"
+                android:textColor="@android:color/black" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/Planeta"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/dworzec"
+            android:paddingTop="5dp"
+            android:paddingRight="5dp"
+            android:paddingBottom="5dp">
+
+            <Button
+                android:id="@+id/btn_Planeta"
+                style="@style/Widget.AppCompat.Button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:background="#FFFFFF"
+                android:elevation="0dp"
+                android:onClick="Show_on_map"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:tag="Planeta kotleta"
+                android:text="@string/show_on_map"
+                android:textAllCaps="false"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/txt_Planeta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="false"
+                android:layout_centerInParent="false"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:text="@string/planeta"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rynek"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/Planeta"
+            android:paddingTop="5dp"
+            android:paddingRight="5dp"
+            android:paddingBottom="5dp">
+
+            <Button
+                android:id="@+id/btn_rynek"
+                style="@style/Widget.AppCompat.Button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:background="#FFFFFF"
+                android:elevation="0dp"
+                android:onClick="Show_on_map"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:tag="Rynek"
+                android:text="@string/show_on_map"
+                android:textAllCaps="false"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/txt_rynek"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="false"
+                android:layout_centerInParent="false"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:text="@string/rynek"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/a"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rynek"
+            android:paddingTop="5dp"
+            android:paddingRight="5dp"
+            android:paddingBottom="5dp">
+
+            <Button
+                android:id="@+id/btn_a"
+                style="@style/Widget.AppCompat.Button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:background="#FFFFFF"
+                android:elevation="0dp"
+                android:onClick="Show_on_map"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:tag="Budynek A"
+                android:text="@string/show_on_map"
+                android:textAllCaps="false"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/txt_a"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="false"
+                android:layout_centerInParent="false"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:text="@string/a"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/b"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/a"
+            android:paddingTop="5dp"
+            android:paddingRight="5dp"
+            android:paddingBottom="5dp">
+
+            <Button
+                android:id="@+id/btn_b"
+                style="@style/Widget.AppCompat.Button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:background="#FFFFFF"
+                android:elevation="0dp"
+                android:onClick="Show_on_map"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:tag="Budynek B"
+                android:text="@string/show_on_map"
+                android:textAllCaps="false"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/txt_b"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="false"
+                android:layout_centerInParent="false"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:text="@string/b"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/e"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/b"
+            android:paddingTop="5dp"
+            android:paddingRight="5dp"
+            android:paddingBottom="5dp">
+
+            <Button
+                android:id="@+id/btn_e"
+                style="@style/Widget.AppCompat.Button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:background="#FFFFFF"
+                android:elevation="0dp"
+                android:onClick="Show_on_map"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:tag="Budynek E"
+                android:text="@string/show_on_map"
+                android:textAllCaps="false"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/txt_e"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="false"
+                android:layout_centerInParent="false"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:text="@string/e"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/f"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/e"
+            android:paddingTop="5dp"
+            android:paddingRight="5dp"
+            android:paddingBottom="5dp">
+
+            <Button
+                android:id="@+id/btn_f"
+                style="@style/Widget.AppCompat.Button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:background="#FFFFFF"
+                android:elevation="0dp"
+                android:onClick="Show_on_map"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:tag="Budynek F"
+                android:text="@string/show_on_map"
+                android:textAllCaps="false"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/txt_f"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="false"
+                android:layout_centerInParent="false"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:text="@string/f"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/n"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/f"
+            android:paddingTop="5dp"
+            android:paddingRight="5dp"
+            android:paddingBottom="5dp">
+
+            <Button
+                android:id="@+id/btn_n"
+                style="@style/Widget.AppCompat.Button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:background="#FFFFFF"
+                android:elevation="0dp"
+                android:onClick="Show_on_map"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:tag="Budynek N"
+                android:text="@string/show_on_map"
+                android:textAllCaps="false"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/txt_n"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="false"
+                android:layout_centerInParent="false"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:text="@string/n"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp" />
+        </RelativeLayout>
     </RelativeLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="40dp"
+        android:background="#113972"
         android:orientation="horizontal">
 
         <Button
@@ -211,7 +490,9 @@
             style="@style/Widget.AppCompat.Button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_margin="4dp"
             android:layout_weight="1"
+            android:background="#FFFFFF"
             android:onClick="Ranking"
             android:text="@string/ranking"
             android:textColor="@android:color/black" />
@@ -221,7 +502,9 @@
             style="@style/Widget.AppCompat.Button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_margin="4dp"
             android:layout_weight="1"
+            android:background="#FFFFFF"
             android:onClick="Back"
             android:text="@string/places"
             android:textColor="@android:color/black" />
@@ -231,7 +514,9 @@
             style="@style/Widget.AppCompat.Button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_margin="4dp"
             android:layout_weight="0.4"
+            android:background="#FFFFFF"
             android:onClick="Logout"
             android:text="@string/logout"
             android:textAlignment="center"
@@ -239,10 +524,8 @@
     </LinearLayout>
 
     <FrameLayout android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    xmlns:android="http://schemas.android.com/apk/res/android">
-    <fragment xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent">
+    <fragment xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/map"
     android:name="com.google.android.gms.maps.SupportMapFragment"
     android:layout_width="match_parent"

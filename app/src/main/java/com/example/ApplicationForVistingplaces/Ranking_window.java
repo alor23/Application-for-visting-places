@@ -64,7 +64,7 @@ public class Ranking_window extends FragmentActivity {
                 RankingList.add(map);
 
                 SimpleAdapter Adapter;
-                Adapter = new SimpleAdapter(this, RankingList, R.layout.ranking_column, new String[]{"place","user_name","points"}, new int[]{R.id.Place, R.id.User_name, R.id.Points});
+                Adapter = new SimpleAdapter(this, RankingList, R.layout.ranking_row, new String[]{"place","user_name","points"}, new int[]{R.id.Place, R.id.User_name, R.id.Points});
 
                 listView.setAdapter(Adapter);
             }

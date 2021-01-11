@@ -1,5 +1,5 @@
 <?php 
-$db_name = "licencjat";
+$db_name = "grapowazna";
 $mysql_username = "root";
 $mysql_password = "";
 $server_name = "localhost";

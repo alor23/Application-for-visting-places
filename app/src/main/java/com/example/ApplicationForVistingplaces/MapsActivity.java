@@ -111,7 +111,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
             mMap.setOnInfoWindowCloseListener(this);
             mMap.setOnInfoWindowClickListener(this);
             accessWebService();
-            LatLng latLng = new LatLng(50.26,19.02);
+            LatLng latLng = new LatLng(50.258,19.044);
             CameraPosition cameraPosition = CameraPosition.builder()
                     .target(latLng)
                     .bearing(4.3f)
@@ -156,8 +156,9 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
             Location target = new Location("target");
             target.setLatitude(placesList.get(i).getLatitude());
             target.setLongitude(placesList.get(i).getLongitiude());
-            if (lastLocation.distanceTo(target) < 100) {
+            if (lastLocation.distanceTo(target) < 50) {
                 getpoints();
+                markers.get(i).setSnippet(placesList.get(i).getDescription());
                 int points = User.points;
                 points +=50;
                 String urlSuffix = "?username=" + User.userName + "&place_name=" + placesList.get(i).getTitle() + "&points=" + points;
@@ -245,7 +246,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         markers.add(mMap.addMarker(new MarkerOptions()
                 .position(latLng)
                 .title(placesList.get(i).getTitle())
-                .snippet(placesList.get(i).getDescription())));
+                .snippet(getString(R.string.visit_place_to_see))));
     }
 
     }
@@ -257,15 +258,15 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
     @Override
     public void onInfoWindowClick(Marker marker) {
-        String url = "";
-        for(int i =0;i<placesList.size();i++)
-        {
-            if(marker.getTitle().equals(markers.get(i).getTitle()))
-            {
-                url=placesList.get(i).getUrl();
-            }
-        }
-        RedirectUsingCustomTab(url);
+//        String url = "";
+//        for(int i =0;i<placesList.size();i++)
+//        {
+//            if(marker.getTitle().equals(markers.get(i).getTitle()))
+//            {
+//                url=placesList.get(i).getUrl();
+//            }
+//        }
+//        RedirectUsingCustomTab(url);
     }
 
     public void Logout(View v) {
@@ -281,18 +282,18 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         startActivity(intent);
     }
 
-    private void RedirectUsingCustomTab(String url) {
-        Uri uri = Uri.parse(url);
-
-        CustomTabsIntent.Builder intentBuilder = new CustomTabsIntent.Builder();
-        intentBuilder.setToolbarColor(ContextCompat.getColor(this, R.color.colorPrimary));
-        intentBuilder.setStartAnimations(this, android.R.anim.slide_in_left, android.R.anim.slide_out_right);
-        intentBuilder.setExitAnimations(this, android.R.anim.slide_in_left, android.R.anim.slide_out_right);
-
-        CustomTabsIntent customTabsIntent = intentBuilder.build();
-
-        customTabsIntent.launchUrl(this, uri);
-    }
+//    private void RedirectUsingCustomTab(String url) {
+//        Uri uri = Uri.parse(url);
+//
+//        CustomTabsIntent.Builder intentBuilder = new CustomTabsIntent.Builder();
+//        intentBuilder.setToolbarColor(ContextCompat.getColor(this, R.color.colorPrimary));
+//        intentBuilder.setStartAnimations(this, android.R.anim.slide_in_left, android.R.anim.slide_out_right);
+//        intentBuilder.setExitAnimations(this, android.R.anim.slide_in_left, android.R.anim.slide_out_right);
+//
+//        CustomTabsIntent customTabsIntent = intentBuilder.build();
+//
+//        customTabsIntent.launchUrl(this, uri);
+//    }
 
     public void Back(View v)
     {
@@ -352,18 +353,18 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         }
 
         private void render(Marker marker, View view) {
-            ImageView image = view.findViewById(R.id.photo);
-            String url = Values.URL+"Photos/";
-            Display display = getWindowManager(). getDefaultDisplay();
-            Point size = new Point();
-            display. getSize(size);
-            for(int i =0;i<markers.size();i++) {
-                if (marker.getTitle().equals(markers.get(i).getTitle())) {
-                    url +=markers.get(i).getTitle() + ".jpg";
-                    Picasso.get().load(url).resize(size.x/3,size.y/5)
-                            .into(image ,new MarkerCallback(marker));
-                }
-            }
+//            ImageView image = view.findViewById(R.id.photo);
+//            String url = Values.URL+"Photos/";
+//            Display display = getWindowManager(). getDefaultDisplay();
+//            Point size = new Point();
+//            display. getSize(size);
+//            for(int i =0;i<markers.size();i++) {
+//                if (marker.getTitle().equals(markers.get(i).getTitle())) {
+//                    url +=markers.get(i).getTitle() + ".jpg";
+//                    Picasso.get().load(url).resize(size.x/3,size.y/5)
+//                            .into(image ,new MarkerCallback(marker));
+//                }
+//            }
             String title = marker.getTitle();
             TextView titleUi = view.findViewById(R.id.name);
             titleUi.setText(title);

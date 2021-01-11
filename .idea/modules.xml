@@ -3,7 +3,9 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Application-for-visting-places.iml" filepath="$PROJECT_DIR$/Application-for-visting-places.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/Application-for-visting-places.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/Application-for-visting-places.app.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/workspaces.Application-for-visting-places.iml" filepath="$PROJECT_DIR$/.idea/modules/workspaces.Application-for-visting-places.iml" />
     </modules>
   </component>
 </project>

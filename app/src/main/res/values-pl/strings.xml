@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Licencjat</string>
+    <string name="app_name">UEKato Knowledge Seeker</string>
     <string name="close">Zamknij</string>
     <string name="show_on_map">Pokaż na mapie</string>
     <string name="back">Wróć</string>
@@ -15,7 +15,6 @@
     <string name="points">Punkty</string>
     <string name="place">Miejsce</string>
     <string name="read_more">Aby dowiedzieć się więcej kliknij w okienko</string>
-    <string name="spodek">Spodek</string>
     <string name="register_succes">Zarejestrowano poprawnie</string>
     <string name="register_failure">Rejestracja zakończona niepowodzeniem</string>
     <string name="error_conncection_db">Brak połączenia z serwerem</string>
@@ -23,10 +22,20 @@
     <string name="wait">Proszę czekać</string>
     <string name="register_fill">Proszę wypełnić oba pola</string>
     <string name="register_user_in_db">Nazwa użytkownika istnieje w bazie</string>
-    <string name="tower">Wieża spadochronowa</string>
-    <string name="theatre">Teatr Śląski</string>
-    <string name="cnti">CNTI</string>
-    <string name="Cathedral">Archikatedra Chrystusa Króla</string>
+    <string name="rektorat">Rektorat UE</string>
+    <string name="cnti">Centrum Nowoczesnych Techhnologii Informatycznych</string>
     <string name="visited_succes">Odwiedzono</string>
     <string name="visited_already">Miejsce zostało już odwiedzone</string>
+    <string name="visit_place_to_see">Odwiedź miejsce by przeczytać opis</string>
+    <string name="login_window">Okno logowania</string>
+    <string name="register_window">Okno rejestracji</string>
+    <string name="cniba">Centrum Informacji Naukowej i Biblioteka Akademicka</string>
+    <string name="dworzec">Dworzec kolejowy</string>
+    <string name="planeta">Planeta kotleta</string>
+    <string name="rynek">Rynek</string>
+    <string name="a">Budynek A</string>
+    <string name="b">Budynek B</string>
+    <string name="e">Budynek E</string>
+    <string name="f">Budynek F</string>
+    <string name="n">Budynek N</string>
 </resources>

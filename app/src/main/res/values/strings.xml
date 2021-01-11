@@ -1,6 +1,5 @@
 <resources>
-    <string name="app_name">Applicationfor visting places</string>
-    <string name="title_activity_maps" translatable="false">Application-for-visting-places</string>
+    <string name="app_name">UEKato Knowledge Seeker</string>
     <string name="close">Close</string>
     <string name="show_on_map">Show on map</string>
     <string name="back">Back</string>
@@ -15,7 +14,6 @@
     <string name="points">Points</string>
     <string name="place">Place</string>
     <string name="read_more">To find out more, click on the box</string>
-    <string name="spodek">Spodek</string>
     <string name="register_succes">Registered successfully</string>
     <string name="register_failure">Registration failed</string>
     <string name="error_conncection_db">No connection to the server</string>
@@ -23,10 +21,21 @@
     <string name="wait">Please wait</string>
     <string name="register_fill">Please fill both fields</string>
     <string name="register_user_in_db">The username exists in the database</string>
-    <string name="tower">Parachute Tower</string>
-    <string name="theatre">Silesian Theatre</string>
-    <string name="cnti">CNTI</string>
-    <string name="Cathedral">Cathedral of Christ the King</string>
+    <string name="rektorat">Rectorate UE</string>
+    <string name="cnti">Centre for Modern Information Technology</string>
+    <string name="google_maps_key">""</string>
     <string name="visited_succes">Visited</string>
     <string name="visited_already">Already visited</string>
+    <string name="visit_place_to_see">Visit place to read description</string>
+    <string name="login_window">Login window</string>
+    <string name="register_window">Register window</string>
+    <string name="cniba">Scientific Information Centre and Academic Library </string>
+    <string name="dworzec">Train station</string>
+    <string name="planeta">Planeta kotleta</string>
+    <string name="rynek">Town square</string>
+    <string name="a">Building A</string>
+    <string name="b">Building B</string>
+    <string name="e">Building E</string>
+    <string name="f">Building F</string>
+    <string name="n">Building N</string>
 </resources>
