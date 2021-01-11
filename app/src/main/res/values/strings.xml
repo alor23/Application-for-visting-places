@@ -23,7 +23,6 @@
     <string name="register_user_in_db">The username exists in the database</string>
     <string name="rektorat">Rectorate UE</string>
     <string name="cnti">Centre for Modern Information Technology</string>
-    <string name="google_maps_key">""</string>
     <string name="visited_succes">Visited</string>
     <string name="visited_already">Already visited</string>
     <string name="visit_place_to_see">Visit place to read description</string>
