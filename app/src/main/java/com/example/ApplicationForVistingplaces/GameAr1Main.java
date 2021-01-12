@@ -4,9 +4,11 @@ import android.graphics.Point;
 import android.media.AudioAttributes;
 import android.media.SoundPool;
 import android.net.Uri;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Display;
+import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
@@ -15,15 +17,16 @@ import com.google.ar.sceneform.Node;
 import com.google.ar.sceneform.Scene;
 import com.google.ar.sceneform.collision.Ray;
 import com.google.ar.sceneform.math.Vector3;
-import com.google.ar.sceneform.rendering.Color;
-import com.google.ar.sceneform.rendering.Material;
 import com.google.ar.sceneform.rendering.MaterialFactory;
 import com.google.ar.sceneform.rendering.ModelRenderable;
 import com.google.ar.sceneform.rendering.ShapeFactory;
 import com.google.ar.sceneform.rendering.Texture;
 
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.net.HttpURLConnection;
+import java.net.URL;
 import java.util.Random;
-import java.util.concurrent.CompletableFuture;
 
 public class GameAr1Main extends AppCompatActivity {
 
@@ -36,6 +39,8 @@ public class GameAr1Main extends AppCompatActivity {
     private TextView bananasLeftTxt;
     private SoundPool soundPool;
     private int sound;
+    private int minutesPassed = 0;
+    private int secondsPassed = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -136,7 +141,54 @@ public class GameAr1Main extends AppCompatActivity {
             runOnUiThread(() -> scene.removeChild(node));
 
         }).start();
-
+        if (bananasLeft==0)
+        {
+//            int result =0;
+//            if (secondsPassed<30)
+//            {
+//                result = 30;
+//            }
+//            else if (minutesPassed<1){
+//                result = 20;
+//            }
+//            else {
+//                result = 10;
+//            }
+//            int points = User.points + result;
+//            String urlSuffix = "?username=" + User.userName + "&points=" + points;
+//            class addpoints extends AsyncTask<String, Void, String> {
+//                @Override
+//                protected void onPreExecute() {
+//                    super.onPreExecute();
+//                }
+//                @Override
+//                protected void onPostExecute(String result) {
+//                    super.onPostExecute(result);
+//                }
+//                @Override
+//                protected String doInBackground(String... params) {
+//                    String parameters = params[0];
+//                    BufferedReader bufferReader=null;
+//                    try {
+//                        URL url=new URL(Values.URL+"updatepoints.php"+parameters);
+//                        HttpURLConnection con=(HttpURLConnection)url.openConnection();
+//                        bufferReader=new BufferedReader(new InputStreamReader(con.getInputStream()));
+//                        String result;
+//                        result=bufferReader.readLine();
+//                        return  result;
+//
+//                    }catch (Exception e){
+//                        return null;
+//                    }
+//                }
+//            }
+//            addpoints add=new addpoints();
+//            add.execute(urlSuffix);
+//            findViewById(R.id.results).setVisibility(View.VISIBLE);
+            //points = findViewById(R.id.points);
+//            TextView time = findViewById(R.id.time);
+//            time.setText(minutesPassed + ":" + secondsPassed);
+        }
     }
 
     private void startTimer() {
@@ -157,8 +209,8 @@ public class GameAr1Main extends AppCompatActivity {
 
                 seconds++;
 
-                int minutesPassed = seconds / 60;
-                int secondsPassed = seconds % 60;
+                minutesPassed = seconds / 60;
+                secondsPassed = seconds % 60;
 
                 runOnUiThread(() -> timer.setText(minutesPassed + ":" + secondsPassed));
 
