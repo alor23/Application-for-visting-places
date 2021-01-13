@@ -269,12 +269,13 @@ public class GameAr1Main extends AppCompatActivity {
                                                 renderable.setMaterial(material);
                                                 node.setRenderable(renderable);
                                                 scene.addChild(node);
-
+                                                float scale =0.5f;
+                                                node.setWorldScale(new Vector3(scale,scale,scale));
 
                                                 Random random = new Random();
-                                                int x = random.nextInt(20);
-                                                int z = random.nextInt(20);
-                                                int y = random.nextInt(40);
+                                                int x = random.nextInt(15);
+                                                int z = random.nextInt(15);
+                                                int y = random.nextInt(25);
 
                                                 z = -z;
 
@@ -283,7 +284,6 @@ public class GameAr1Main extends AppCompatActivity {
                                                         y / 10f,
                                                         (float) z
                                                 ));
-
 
                                             }
 

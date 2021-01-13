@@ -25,7 +25,8 @@
 
         <meta-data android:name="com.google.ar.core" android:value="required" />
 
-        <activity android:name=".GameAr1Main">
+        <activity android:name=".GameAr1Main" android:screenOrientation="portrait">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
