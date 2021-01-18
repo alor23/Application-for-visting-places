@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">UEKato Knowledge Seeker</string>
     <string name="close">Zamknij</string>
     <string name="show_on_map">Pokaż na mapie</string>
     <string name="back">Wróć</string>

@@ -258,15 +258,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
     @Override
     public void onInfoWindowClick(Marker marker) {
-//        String url = "";
-//        for(int i =0;i<placesList.size();i++)
-//        {
-//            if(marker.getTitle().equals(markers.get(i).getTitle()))
-//            {
-//                url=placesList.get(i).getUrl();
-//            }
-//        }
-//        RedirectUsingCustomTab(url);
+        startActivity(new Intent(MapsActivity.this, GameAr1Main.class));
     }
 
     public void Logout(View v) {

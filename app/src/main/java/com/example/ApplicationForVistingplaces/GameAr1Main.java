@@ -5,6 +5,7 @@ import android.graphics.Point;
 import android.media.AudioAttributes;
 import android.media.SoundPool;
 import android.net.Uri;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Display;
@@ -23,6 +24,10 @@ import com.google.ar.sceneform.rendering.ModelRenderable;
 import com.google.ar.sceneform.rendering.ShapeFactory;
 import com.google.ar.sceneform.rendering.Texture;
 
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.net.HttpURLConnection;
+import java.net.URL;
 import java.util.Random;
 
 public class GameAr1Main extends AppCompatActivity {
@@ -142,47 +147,47 @@ public class GameAr1Main extends AppCompatActivity {
         {
             RelativeLayout viewresult = findViewById(R.id.results);
             viewresult.setVisibility(View.VISIBLE);
-//            int result =0;
-//            if (secondsPassed<30)
-//            {
-//                result = 30;
-//            }
-//            else if (minutesPassed<1){
-//                result = 20;
-//            }
-//            else {
-//                result = 10;
-//            }
-//            int points = User.points + result;
-//            String urlSuffix = "?username=" + User.userName + "&points=" + points;
-//            class addpoints extends AsyncTask<String, Void, String> {
-//                @Override
-//                protected void onPreExecute() {
-//                    super.onPreExecute();
-//                }
-//                @Override
-//                protected void onPostExecute(String result) {
-//                    super.onPostExecute(result);
-//                }
-//                @Override
-//                protected String doInBackground(String... params) {
-//                    String parameters = params[0];
-//                    BufferedReader bufferReader=null;
-//                    try {
-//                        URL url=new URL(Values.URL+"updatepoints.php"+parameters);
-//                        HttpURLConnection con=(HttpURLConnection)url.openConnection();
-//                        bufferReader=new BufferedReader(new InputStreamReader(con.getInputStream()));
-//                        String result;
-//                        result=bufferReader.readLine();
-//                        return  result;
-//
-//                    }catch (Exception e){
-//                        return null;
-//                    }
-//                }
-//            }
-//            addpoints add=new addpoints();
-//            add.execute(urlSuffix);
+            int result =0;
+            if (secondsPassed<30)
+            {
+                result = 30;
+            }
+            else if (minutesPassed<1){
+                result = 20;
+            }
+            else {
+                result = 10;
+            }
+            int points = User.points + result;
+            String urlSuffix = "?username=" + User.userName + "&points=" + points;
+            class addpoints extends AsyncTask<String, Void, String> {
+                @Override
+                protected void onPreExecute() {
+                    super.onPreExecute();
+                }
+                @Override
+                protected void onPostExecute(String result) {
+                    super.onPostExecute(result);
+                }
+                @Override
+                protected String doInBackground(String... params) {
+                    String parameters = params[0];
+                    BufferedReader bufferReader=null;
+                    try {
+                        URL url=new URL(Values.URL+"updatepoints.php"+parameters);
+                        HttpURLConnection con=(HttpURLConnection)url.openConnection();
+                        bufferReader=new BufferedReader(new InputStreamReader(con.getInputStream()));
+                        String result;
+                        result=bufferReader.readLine();
+                        return  result;
+
+                    }catch (Exception e){
+                        return null;
+                    }
+                }
+            }
+            addpoints add=new addpoints();
+            add.execute(urlSuffix);
             findViewById(R.id.results).setVisibility(View.VISIBLE);
             TextView pointsview = findViewById(R.id.points);
             pointsview.setText("50");

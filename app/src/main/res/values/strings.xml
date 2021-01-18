@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">UEKato Knowledge Seeker</string>
+    <string name="app_name" translatable="false">ZOO Seeker</string>
     <string name="close">Close</string>
     <string name="show_on_map">Show on map</string>
     <string name="back">Back</string>
@@ -37,5 +37,5 @@
     <string name="e">Building E</string>
     <string name="f">Building F</string>
     <string name="n">Building N</string>
-    <string name="time">Time</string>
+    <string name="time" translatable="false">Time</string>
 </resources>
