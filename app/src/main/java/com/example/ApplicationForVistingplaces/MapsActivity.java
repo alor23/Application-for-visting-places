@@ -5,12 +5,10 @@ import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.Point;
 import android.location.Location;
-import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
-import android.support.customtabs.CustomTabsIntent;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.content.ContextCompat;
 import android.view.Display;
@@ -111,7 +109,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
             mMap.setOnInfoWindowCloseListener(this);
             mMap.setOnInfoWindowClickListener(this);
             accessWebService();
-            LatLng latLng = new LatLng(50.258,19.044);
+            LatLng latLng = new LatLng(50.2444,18.832);
             CameraPosition cameraPosition = CameraPosition.builder()
                     .target(latLng)
                     .bearing(4.3f)
@@ -274,19 +272,6 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         startActivity(intent);
     }
 
-//    private void RedirectUsingCustomTab(String url) {
-//        Uri uri = Uri.parse(url);
-//
-//        CustomTabsIntent.Builder intentBuilder = new CustomTabsIntent.Builder();
-//        intentBuilder.setToolbarColor(ContextCompat.getColor(this, R.color.colorPrimary));
-//        intentBuilder.setStartAnimations(this, android.R.anim.slide_in_left, android.R.anim.slide_out_right);
-//        intentBuilder.setExitAnimations(this, android.R.anim.slide_in_left, android.R.anim.slide_out_right);
-//
-//        CustomTabsIntent customTabsIntent = intentBuilder.build();
-//
-//        customTabsIntent.launchUrl(this, uri);
-//    }
-
     public void Back(View v)
     {
 
@@ -345,18 +330,18 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         }
 
         private void render(Marker marker, View view) {
-//            ImageView image = view.findViewById(R.id.photo);
-//            String url = Values.URL+"Photos/";
-//            Display display = getWindowManager(). getDefaultDisplay();
-//            Point size = new Point();
-//            display. getSize(size);
-//            for(int i =0;i<markers.size();i++) {
-//                if (marker.getTitle().equals(markers.get(i).getTitle())) {
-//                    url +=markers.get(i).getTitle() + ".jpg";
-//                    Picasso.get().load(url).resize(size.x/3,size.y/5)
-//                            .into(image ,new MarkerCallback(marker));
-//                }
-//            }
+            ImageView image = view.findViewById(R.id.photo);
+            String url = Values.URL+"Photos/";
+            Display display = getWindowManager(). getDefaultDisplay();
+            Point size = new Point();
+            display. getSize(size);
+            for(int i =0;i<markers.size();i++) {
+                if (marker.getTitle().equals(markers.get(i).getTitle())) {
+                    url +=markers.get(i).getTitle() + ".jpg";
+                    Picasso.get().load(url).resize(size.x/3,size.y/5)
+                            .into(image ,new MarkerCallback(marker));
+                }
+            }
             String title = marker.getTitle();
             TextView titleUi = view.findViewById(R.id.name);
             titleUi.setText(title);
@@ -364,6 +349,13 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
             String snippet = marker.getSnippet();
             TextView snippetUi = view.findViewById(R.id.description);
             snippetUi.setText(snippet);
+            TextView play_desc = view.findViewById(R.id.play_game_desc);
+            if (snippet.equals(getString(R.string.visit_place_to_see))){
+                play_desc.setVisibility(View.GONE);
+            }
+            else {
+                play_desc.setVisibility(View.VISIBLE);
+            }
         }
 
         @Override

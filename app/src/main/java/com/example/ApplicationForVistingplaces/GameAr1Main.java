@@ -190,7 +190,7 @@ public class GameAr1Main extends AppCompatActivity {
             add.execute(urlSuffix);
             findViewById(R.id.results).setVisibility(View.VISIBLE);
             TextView pointsview = findViewById(R.id.points);
-            pointsview.setText("50");
+            pointsview.setText(result);
             TextView time = findViewById(R.id.Time);
             time.setText(minutesPassed + ":" + secondsPassed);
         }
