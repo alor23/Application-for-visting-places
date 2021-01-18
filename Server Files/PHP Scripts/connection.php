@@ -1,5 +1,5 @@
 <?php 
-$db_name = "grapowazna";
+$db_name = "ar";
 $mysql_username = "root";
 $mysql_password = "";
 $server_name = "localhost";
