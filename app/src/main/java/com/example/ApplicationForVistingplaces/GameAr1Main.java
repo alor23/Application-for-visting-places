@@ -1,15 +1,16 @@
 package com.example.ApplicationForVistingplaces;
 
+import android.content.Intent;
 import android.graphics.Point;
 import android.media.AudioAttributes;
 import android.media.SoundPool;
 import android.net.Uri;
-import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Display;
 import android.view.View;
 import android.widget.Button;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.google.ar.sceneform.Camera;
@@ -22,10 +23,6 @@ import com.google.ar.sceneform.rendering.ModelRenderable;
 import com.google.ar.sceneform.rendering.ShapeFactory;
 import com.google.ar.sceneform.rendering.Texture;
 
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
-import java.net.HttpURLConnection;
-import java.net.URL;
 import java.util.Random;
 
 public class GameAr1Main extends AppCompatActivity {
@@ -143,6 +140,8 @@ public class GameAr1Main extends AppCompatActivity {
         }).start();
         if (bananasLeft==0)
         {
+            RelativeLayout viewresult = findViewById(R.id.results);
+            viewresult.setVisibility(View.VISIBLE);
 //            int result =0;
 //            if (secondsPassed<30)
 //            {
@@ -184,10 +183,11 @@ public class GameAr1Main extends AppCompatActivity {
 //            }
 //            addpoints add=new addpoints();
 //            add.execute(urlSuffix);
-//            findViewById(R.id.results).setVisibility(View.VISIBLE);
-            //points = findViewById(R.id.points);
-//            TextView time = findViewById(R.id.time);
-//            time.setText(minutesPassed + ":" + secondsPassed);
+            findViewById(R.id.results).setVisibility(View.VISIBLE);
+            TextView pointsview = findViewById(R.id.points);
+            pointsview.setText("50");
+            TextView time = findViewById(R.id.Time);
+            time.setText(minutesPassed + ":" + secondsPassed);
         }
     }
 
@@ -291,6 +291,15 @@ public class GameAr1Main extends AppCompatActivity {
                             });
                 });
 
+        View.OnClickListener onClickListener = new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(GameAr1Main.this, MapsActivity.class));
+            }
+        };
 
+        Button button = (Button) findViewById(R.id.back_btn);
+        button.setOnClickListener(onClickListener);
     }
+
 }
