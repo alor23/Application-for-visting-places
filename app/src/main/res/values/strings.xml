@@ -21,21 +21,12 @@
     <string name="wait">Please wait</string>
     <string name="register_fill">Please fill both fields</string>
     <string name="register_user_in_db">The username exists in the database</string>
-    <string name="rektorat">Rectorate UE</string>
-    <string name="cnti">Centre for Modern Information Technology</string>
     <string name="visited_succes">Visited</string>
     <string name="visited_already">Already visited</string>
     <string name="visit_place_to_see">Visit place to read description</string>
     <string name="login_window">Login window</string>
     <string name="register_window">Register window</string>
-    <string name="cniba">Scientific Information Centre and Academic Library </string>
-    <string name="dworzec">Train station</string>
-    <string name="planeta">Planeta kotleta</string>
-    <string name="rynek">Town square</string>
-    <string name="a">Building A</string>
-    <string name="b">Building B</string>
-    <string name="e">Building E</string>
-    <string name="f">Building F</string>
-    <string name="n">Building N</string>
     <string name="time" translatable="false">Time</string>
+    <string name="szymapns" translatable="false">Szympans</string>
+    <string name="zwierze" translatable="false">test</string>
 </resources>
