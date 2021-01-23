@@ -256,7 +256,13 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
     @Override
     public void onInfoWindowClick(Marker marker) {
-        startActivity(new Intent(MapsActivity.this, GameAr1Main.class));
+        for(int i =0;i<placesList.size();i++)
+        {
+            if(marker.getTitle().equals("Szympans"))
+            {
+                startActivity(new Intent(MapsActivity.this, GameAr1Main.class));
+            }
+        }
     }
 
     public void Logout(View v) {

@@ -13,7 +13,7 @@
     <string name="position">Miejsce</string>
     <string name="points">Punkty</string>
     <string name="place">Miejsce</string>
-    <string name="read_more">Aby dowiedzieć się więcej kliknij w okienko</string>
+    <string name="read_more">Aby zagrać w grę kliknij w okienko</string>
     <string name="register_succes">Zarejestrowano poprawnie</string>
     <string name="register_failure">Rejestracja zakończona niepowodzeniem</string>
     <string name="error_conncection_db">Brak połączenia z serwerem</string>
@@ -25,7 +25,7 @@
     <string name="cnti">Centrum Nowoczesnych Techhnologii Informatycznych</string>
     <string name="visited_succes">Odwiedzono</string>
     <string name="visited_already">Miejsce zostało już odwiedzone</string>
-    <string name="visit_place_to_see">Odwiedź miejsce by przeczytać opis</string>
+    <string name="visit_place_to_see">Odwiedź miejsce by przeczytać opis i zagrać w grę</string>
     <string name="login_window">Okno logowania</string>
     <string name="register_window">Okno rejestracji</string>
     <string name="cniba">Centrum Informacji Naukowej i Biblioteka Akademicka</string>
