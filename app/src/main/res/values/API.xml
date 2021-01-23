@@ -1,4 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="google_maps_key">"AIzaSyCe7m7cM7fgBOlS65iyo-eqN4-OZ8OsowA"</string>
+    <string name="google_maps_key">""</string>
 </resources>
