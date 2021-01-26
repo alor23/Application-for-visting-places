@@ -14,7 +14,7 @@
 
         <android.support.v7.widget.LinearLayoutCompat
             android:id="@+id/cnti"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/back"
             android:paddingTop="5dp"
@@ -33,7 +33,7 @@
                 android:layout_marginRight="10dp"
                 android:layout_weight="2"
                 android:padding="3dp"
-                android:text="@string/zwierze"
+                android:text="Pies"
                 android:textColor="#FFFFFF"
                 android:textSize="20sp" />
 
@@ -48,7 +48,7 @@
                 android:onClick="Show_on_map"
                 android:paddingLeft="10dp"
                 android:paddingRight="10dp"
-                android:tag="Centrum Nowoczesnych Technologii Informatycznych"
+                android:tag="Pies"
                 android:text="@string/show_on_map"
                 android:textAllCaps="false"
                 android:textColor="@android:color/black" />
