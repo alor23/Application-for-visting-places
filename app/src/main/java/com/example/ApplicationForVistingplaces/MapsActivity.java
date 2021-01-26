@@ -262,7 +262,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
             {
                 startActivity(new Intent(MapsActivity.this, GameAr1Main.class));
             }
-            else if (marker.getTitle().equals("test")){
+            else if (marker.getTitle().equals("Pies")){
                 startActivity(new Intent(MapsActivity.this, MainActivity.class));
             }
         }
