@@ -5,6 +5,91 @@
     android:orientation="vertical"
     xmlns:android="http://schemas.android.com/apk/res/android">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#113972"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#113972"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#FFFFFF"
+                android:text="Legenda"
+                android:textSize="26sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textView8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/holo_green_light"
+                android:text="Zielony - bazy danych"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textView9"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/holo_red_light"
+                android:text="Czerwony - silniki gier"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="#113972"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn_ranking"
+                style="@style/Widget.AppCompat.Button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:layout_weight="1"
+                android:background="#FFFFFF"
+                android:onClick="Ranking"
+                android:text="@string/ranking"
+                android:textColor="@android:color/black" />
+
+            <Button
+                android:id="@+id/btn_places"
+                style="@style/Widget.AppCompat.Button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:layout_weight="1"
+                android:background="#FFFFFF"
+                android:onClick="Back"
+                android:text="@string/places"
+                android:textColor="@android:color/black" />
+
+            <Button
+                android:id="@+id/btn_logout"
+                style="@style/Widget.AppCompat.Button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:layout_weight="0.4"
+                android:background="#FFFFFF"
+                android:onClick="Logout"
+                android:text="@string/logout"
+                android:textAlignment="center"
+                android:textColor="@android:color/black" />
+        </LinearLayout>
+    </LinearLayout>
+
     <RelativeLayout
         android:id="@+id/places_view"
         android:layout_width="match_parent"
@@ -44,7 +129,7 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentEnd="true"
                 android:layout_marginTop="15dp"
-                android:background="#FFFFFF"
+                android:background="#4CAF50"
                 android:elevation="0dp"
                 android:onClick="Show_on_map"
                 android:paddingLeft="10dp"
@@ -71,7 +156,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentEnd="true"
-                android:background="#FFFFFF"
+                android:background="#E91E1E"
                 android:elevation="0dp"
                 android:onClick="Show_on_map"
                 android:paddingLeft="10dp"
@@ -479,53 +564,10 @@
         </RelativeLayout>
     </RelativeLayout>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:background="#113972"
-        android:orientation="horizontal">
-
-        <Button
-            android:id="@+id/btn_ranking"
-            style="@style/Widget.AppCompat.Button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="4dp"
-            android:layout_weight="1"
-            android:background="#FFFFFF"
-            android:onClick="Ranking"
-            android:text="@string/ranking"
-            android:textColor="@android:color/black" />
-
-        <Button
-            android:id="@+id/btn_places"
-            style="@style/Widget.AppCompat.Button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="4dp"
-            android:layout_weight="1"
-            android:background="#FFFFFF"
-            android:onClick="Back"
-            android:text="@string/places"
-            android:textColor="@android:color/black" />
-
-        <Button
-            android:id="@+id/btn_logout"
-            style="@style/Widget.AppCompat.Button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="4dp"
-            android:layout_weight="0.4"
-            android:background="#FFFFFF"
-            android:onClick="Logout"
-            android:text="@string/logout"
-            android:textAlignment="center"
-            android:textColor="@android:color/black" />
-    </LinearLayout>
-
     <FrameLayout android:layout_width="match_parent"
     android:layout_height="match_parent">
-    <fragment xmlns:tools="http://schemas.android.com/tools"
+
+        <fragment xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/map"
     android:name="com.google.android.gms.maps.SupportMapFragment"
     android:layout_width="match_parent"

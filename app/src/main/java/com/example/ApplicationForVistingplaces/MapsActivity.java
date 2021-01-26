@@ -37,6 +37,7 @@ import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.UiSettings;
+import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.CameraPosition;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
@@ -243,10 +244,20 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     {
         LatLng latLng = new LatLng(placesList.get(i).getLatitude(),placesList.get(i).getLongitiude());
 
-        markers.add(mMap.addMarker(new MarkerOptions()
-                .position(latLng)
-                .title(placesList.get(i).getTitle())
-                .snippet(getString(R.string.visit_place_to_see))));
+
+        if ("Budynek B".equals(placesList.get(i).getTitle())){
+            markers.add(mMap.addMarker(new MarkerOptions()
+                    .position(latLng)
+                    .title(placesList.get(i).getTitle())
+                    .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_GREEN))
+                    .snippet(getString(R.string.visit_place_to_see))));
+        }
+        else{
+            markers.add(mMap.addMarker(new MarkerOptions()
+                    .position(latLng)
+                    .title(placesList.get(i).getTitle())
+                    .snippet(getString(R.string.visit_place_to_see))));
+        }
     }
 
     }
@@ -258,15 +269,6 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
     @Override
     public void onInfoWindowClick(Marker marker) {
-//        String url = "";
-//        for(int i =0;i<placesList.size();i++)
-//        {
-//            if(marker.getTitle().equals(markers.get(i).getTitle()))
-//            {
-//                url=placesList.get(i).getUrl();
-//            }
-//        }
-//        RedirectUsingCustomTab(url);
     }
 
     public void Logout(View v) {
@@ -282,18 +284,6 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         startActivity(intent);
     }
 
-//    private void RedirectUsingCustomTab(String url) {
-//        Uri uri = Uri.parse(url);
-//
-//        CustomTabsIntent.Builder intentBuilder = new CustomTabsIntent.Builder();
-//        intentBuilder.setToolbarColor(ContextCompat.getColor(this, R.color.colorPrimary));
-//        intentBuilder.setStartAnimations(this, android.R.anim.slide_in_left, android.R.anim.slide_out_right);
-//        intentBuilder.setExitAnimations(this, android.R.anim.slide_in_left, android.R.anim.slide_out_right);
-//
-//        CustomTabsIntent customTabsIntent = intentBuilder.build();
-//
-//        customTabsIntent.launchUrl(this, uri);
-//    }
 
     public void Back(View v)
     {
@@ -353,18 +343,6 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         }
 
         private void render(Marker marker, View view) {
-//            ImageView image = view.findViewById(R.id.photo);
-//            String url = Values.URL+"Photos/";
-//            Display display = getWindowManager(). getDefaultDisplay();
-//            Point size = new Point();
-//            display. getSize(size);
-//            for(int i =0;i<markers.size();i++) {
-//                if (marker.getTitle().equals(markers.get(i).getTitle())) {
-//                    url +=markers.get(i).getTitle() + ".jpg";
-//                    Picasso.get().load(url).resize(size.x/3,size.y/5)
-//                            .into(image ,new MarkerCallback(marker));
-//                }
-//            }
             String title = marker.getTitle();
             TextView titleUi = view.findViewById(R.id.name);
             titleUi.setText(title);
