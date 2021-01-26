@@ -109,7 +109,6 @@ public class MainActivity extends AppCompatActivity implements Scene.OnUpdateLis
     private void configSession() {
 
         Config config = new Config(session);
-        Toast.makeText(this, "start", Toast.LENGTH_SHORT).show();
 
         if (!buildDatabase(config))
         {
