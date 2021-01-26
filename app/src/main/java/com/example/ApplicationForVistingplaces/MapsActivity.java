@@ -262,6 +262,9 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
             {
                 startActivity(new Intent(MapsActivity.this, GameAr1Main.class));
             }
+            else if (marker.getTitle().equals("test")){
+                startActivity(new Intent(MapsActivity.this, MainActivity.class));
+            }
         }
     }
 
