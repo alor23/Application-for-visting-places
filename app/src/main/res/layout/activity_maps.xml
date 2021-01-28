@@ -13,40 +13,6 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="#113972"
-            android:orientation="vertical">
-
-            <TextView
-                android:id="@+id/textView10"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="#FFFFFF"
-                android:text="Legenda"
-                android:textSize="26sp"
-                android:textStyle="bold" />
-
-            <TextView
-                android:id="@+id/textView8"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@android:color/holo_green_light"
-                android:text="Zielony - bazy danych"
-                android:textSize="24sp"
-                android:textStyle="bold" />
-
-            <TextView
-                android:id="@+id/textView9"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@android:color/holo_red_light"
-                android:text="Czerwony - silniki gier"
-                android:textSize="24sp"
-                android:textStyle="bold" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
             android:layout_height="40dp"
             android:background="#113972"
             android:orientation="horizontal">
@@ -76,6 +42,18 @@
                 android:textColor="@android:color/black" />
 
             <Button
+                android:id="@+id/btn_legenda"
+                style="@style/Widget.AppCompat.Button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:layout_weight="1"
+                android:background="#FFFFFF"
+                android:onClick="Hide"
+                android:text="Legenda"
+                android:textColor="@android:color/black" />
+
+            <Button
                 android:id="@+id/btn_logout"
                 style="@style/Widget.AppCompat.Button"
                 android:layout_width="wrap_content"
@@ -88,6 +66,43 @@
                 android:textAlignment="center"
                 android:textColor="@android:color/black" />
         </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/legenda"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#113972"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/textView10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#FFFFFF"
+                android:text="Legenda"
+                android:textSize="26sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textView8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/holo_green_light"
+                android:text="Zielony - Bazy danych i inżynieria danych"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textView9"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/holo_red_light"
+                android:text="Czerwony - Programowanie gier i aplikacji mobilnych"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
     </LinearLayout>
 
     <RelativeLayout
@@ -129,7 +144,7 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentEnd="true"
                 android:layout_marginTop="15dp"
-                android:background="#4CAF50"
+                android:background="@android:color/holo_red_light"
                 android:elevation="0dp"
                 android:onClick="Show_on_map"
                 android:paddingLeft="10dp"
@@ -156,7 +171,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentEnd="true"
-                android:background="#E91E1E"
+                android:background="@android:color/holo_green_light"
                 android:elevation="0dp"
                 android:onClick="Show_on_map"
                 android:paddingLeft="10dp"
@@ -213,7 +228,7 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentEnd="true"
                 android:layout_marginTop="15dp"
-                android:background="#FFFFFF"
+                android:background="@android:color/holo_green_light"
                 android:elevation="0dp"
                 android:onClick="Show_on_map"
                 android:paddingLeft="10dp"
@@ -239,7 +254,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentEnd="true"
-                android:background="#FFFFFF"
+                android:background="@android:color/holo_red_light"
                 android:elevation="0dp"
                 android:onClick="Show_on_map"
                 android:paddingLeft="10dp"
@@ -298,7 +313,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentEnd="true"
-                android:background="#FFFFFF"
+                android:background="@android:color/holo_green_light"
                 android:elevation="0dp"
                 android:onClick="Show_on_map"
                 android:paddingLeft="10dp"
@@ -324,50 +339,10 @@
         </RelativeLayout>
 
         <RelativeLayout
-            android:id="@+id/rynek"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/Planeta"
-            android:paddingTop="5dp"
-            android:paddingRight="5dp"
-            android:paddingBottom="5dp">
-
-            <Button
-                android:id="@+id/btn_rynek"
-                style="@style/Widget.AppCompat.Button"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentEnd="true"
-                android:background="#FFFFFF"
-                android:elevation="0dp"
-                android:onClick="Show_on_map"
-                android:paddingLeft="10dp"
-                android:paddingRight="10dp"
-                android:tag="Rynek"
-                android:text="@string/show_on_map"
-                android:textAllCaps="false"
-                android:textColor="@android:color/black" />
-
-            <TextView
-                android:id="@+id/txt_rynek"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentEnd="false"
-                android:layout_centerInParent="false"
-                android:layout_centerVertical="true"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
-                android:text="@string/rynek"
-                android:textColor="#FFFFFF"
-                android:textSize="20sp" />
-        </RelativeLayout>
-
-        <RelativeLayout
             android:id="@+id/a"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/rynek"
+            android:layout_below="@id/Planeta"
             android:paddingTop="5dp"
             android:paddingRight="5dp"
             android:paddingBottom="5dp">
@@ -378,7 +353,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentEnd="true"
-                android:background="#FFFFFF"
+                android:background="@android:color/holo_green_light"
                 android:elevation="0dp"
                 android:onClick="Show_on_map"
                 android:paddingLeft="10dp"
@@ -418,7 +393,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentEnd="true"
-                android:background="#FFFFFF"
+                android:background="@android:color/holo_red_light"
                 android:elevation="0dp"
                 android:onClick="Show_on_map"
                 android:paddingLeft="10dp"
@@ -458,7 +433,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentEnd="true"
-                android:background="#FFFFFF"
+                android:background="@android:color/holo_red_light"
                 android:elevation="0dp"
                 android:onClick="Show_on_map"
                 android:paddingLeft="10dp"
@@ -498,7 +473,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentEnd="true"
-                android:background="#FFFFFF"
+                android:background="@android:color/holo_green_light"
                 android:elevation="0dp"
                 android:onClick="Show_on_map"
                 android:paddingLeft="10dp"
@@ -538,7 +513,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentEnd="true"
-                android:background="#FFFFFF"
+                android:background="@android:color/holo_red_light"
                 android:elevation="0dp"
                 android:onClick="Show_on_map"
                 android:paddingLeft="10dp"

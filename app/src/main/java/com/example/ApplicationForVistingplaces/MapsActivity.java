@@ -3,7 +3,9 @@ package com.example.ApplicationForVistingplaces;
 import android.Manifest;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.graphics.Color;
 import android.graphics.Point;
+import android.graphics.drawable.ColorDrawable;
 import android.location.Location;
 import android.net.Uri;
 import android.os.AsyncTask;
@@ -16,6 +18,7 @@ import android.support.v4.content.ContextCompat;
 import android.view.Display;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -62,6 +65,7 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 import static com.google.android.gms.maps.GoogleMap.MAP_TYPE_HYBRID;
@@ -74,6 +78,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         LocationListener {
 
     private RelativeLayout places_view;
+    private LinearLayout legenda;
     private GoogleMap mMap;
     private UiSettings mUiSettings;
     private GoogleApiClient googleApiClient;
@@ -91,6 +96,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_maps);
         places_view = findViewById(R.id.places_view);
+        legenda = findViewById(R.id.legenda);
 
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);
@@ -245,12 +251,13 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         LatLng latLng = new LatLng(placesList.get(i).getLatitude(),placesList.get(i).getLongitiude());
 
 
-        if ("Budynek B".equals(placesList.get(i).getTitle())){
+        if ("b".equals(placesList.get(i).getUrl())){
             markers.add(mMap.addMarker(new MarkerOptions()
                     .position(latLng)
                     .title(placesList.get(i).getTitle())
                     .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_GREEN))
                     .snippet(getString(R.string.visit_place_to_see))));
+            markers.get(i).setTag("b");
         }
         else{
             markers.add(mMap.addMarker(new MarkerOptions()
@@ -298,6 +305,19 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         }
     }
 
+    public void Hide(View v)
+    {
+
+        if(legenda.getVisibility() == View.GONE)
+        {
+            legenda.setVisibility(View.VISIBLE);
+        }
+        else
+        {
+            legenda.setVisibility(View.GONE);
+        }
+    }
+
     public void Show_on_map(View v)
     {
         for(int i =0;i<placesList.size();i++)
@@ -315,26 +335,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
             }
         }
     }
-    private class MarkerCallback implements Callback {
-        Marker marker=null;
 
-        MarkerCallback(Marker marker) {
-            this.marker=marker;
-        }
-
-        @Override
-        public void onSuccess() {
-            if (marker != null && marker.isInfoWindowShown()) {
-                marker.hideInfoWindow();
-                marker.showInfoWindow();
-            }
-        }
-
-        @Override
-        public void onError(Exception e) {
-
-        }
-    }
     class CustomInfoWindowAdapter implements GoogleMap.InfoWindowAdapter {
 
         private final View mContents;
@@ -350,6 +351,19 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
             String snippet = marker.getSnippet();
             TextView snippetUi = view.findViewById(R.id.description);
             snippetUi.setText(snippet);
+            int red = Color.parseColor("#FF3333");
+            int green = Color.parseColor("#33FF33");
+            if ("b".equals(marker.getTag()))
+            {
+                titleUi.setBackgroundColor(green);
+                snippetUi.setBackgroundColor(green);
+            }
+            else{
+                titleUi.setBackgroundColor(red);
+                snippetUi.setBackgroundColor(red);
+            }
+
+
         }
 
         @Override

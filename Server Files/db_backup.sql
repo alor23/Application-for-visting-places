@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Czas generowania: 21 Gru 2020, 21:37
+-- Czas generowania: 28 Sty 2021, 11:31
 -- Wersja serwera: 10.4.14-MariaDB
 -- Wersja PHP: 7.4.11
 
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Baza danych: `gra_powazna`
+-- Baza danych: `grapowazna`
 --
 
 -- --------------------------------------------------------
@@ -40,17 +40,16 @@ CREATE TABLE `places` (
 --
 
 INSERT INTO `places` (`title_name`, `description`, `url`, `latitude`, `longitude`) VALUES
-('Budynek A', 'Specjalność Analiza dużych zbiorów danych została przygotowana dla studentów, którzy posiadając już wiedzę z zakresu programowania chcą swoją wiedzę wykorzystać w procesach przetwarzania i analizy danych oraz ogólniej w ramach dynamicznie rozwijającego się nurtu określanego jako Big Data i Data Science.', '', 50.2593, 19.0444),
-('Budynek B', 'Przedmioty specjalności analiza dużych zbiorów danych obejmują główne zagadnienia gromadzenia, integracji, wizualizacji i analizy dużych danych i charakteryzują się dużą liczbą zajęć ćwiczeniowych. Na zajęciach wykorzystywane są środowiska i języki programowania, których znajomość jest szczególnie poszukiwana na rynku pracy (Python, C#, R, bazy danych NoSQL, narzędzia BI, platforma AZURE).', '', 50.2598, 19.0458),
-('Budynek E', 'Duży nacisk położono na umiejętności praktyczne, dlatego zajęcia z przedmiotów informatycznych prowadzone są w 100% w pracowniach komputerowych wyposażonych w nowoczesne oprogramowanie. W trakcie studiów studenci specjalności Analiza dużych zbiorów danych obok umiejętności programowania nabywają również zaawansowane umiejętności w zakresie posługiwania się specjalistycznym oprogramowaniem służącym przetwarzaniu dużych danych oraz pozyskiwaniu i wizualizacji wiedzy ukrytej w danych.', '', 50.2588, 19.0459),
-('Budynek F', 'Ukończenie studiów na tej specjalności jest ogromnym atutem na rynku pracy, ponieważ specjaliści z zakresu Data Science są poszukiwani i wysoko opłacani. Absolwent specjalności może z powodzeniem zostać zatrudniony w dowolnej firmie dostarczającej oprogramowanie związane z analityką danych, jak i w przedsiębiorstwie każdego typu na stanowiskach informatycznych i analitycznych.', '', 50.2601, 19.0425),
-('Budynek N', 'Przedmioty specjalności obejmują główne zagadnienia gromadzenia, integracji, wizualizacji i analizy dużych danych i charakteryzują się dużą liczbą zajęć ćwiczeniowych. Na zajęciach wykorzystywane są środowiska i języki programowania, których znajomość jest szczególnie poszukiwana na rynku pracy (Python, C#, R, bazy danych NoSQL, narzędzia BI, platforma AZURE).', '', 50.2536, 19.0023),
-('Centrum Informacji Naukowej i Biblioteka Akademick', 'Grywalizacja – jak wykorzystać projekty grywalizacyjne w różnych obszarach działalności człowieka;', '', 50.2608, 19.0298),
-('Centrum Nowoczesnych Technologii Informatycznych', 'Marketing gier komputerowych – jak wykorzystać potencjał gier komputerowych w obszarze marketingu oraz jak tworzyć kampanie marketingowe dla gier i aplikacji mobilnych;', '', 50.2603, 19.0451),
-('Dworzec Katowice', 'Sztuczna inteligencja w grach – jak metody i narzędzia sztucznej inteligencji wpływają na gry komputerowe. Jak spowodować by przeciwnicy w grach zachowywali się realistycznie i grali lepiej;', '', 50.257, 19.0163),
-('Planeta kotleta', 'Aplikacje mobilne oraz rozszerzona i wirtualna rzeczywistość – jak rozbudować tradycyjne aplikacje mobilne o elementy rozszerzonej rzeczywistości oraz jak programować rzeczywistość wirtualną;', '', 50.2574, 19.0329),
-('Rektorat UE', 'Gry poważne – jak wykorzystać potencjał gier i zainteresowanie grami do przekazywania wiedzy z różnych obszarów funkcjonowania człowieka;', '', 50.2585, 19.0447),
-('Rynek', 'Silniki gier – jak zbudowane są i jak funkcjonują nowoczesne silniki gier. W jaki sposób, z wykorzystaniem silnika gier przekształcić pomysł na grę w finalny produkt działający na różnych platformach sprzętowo – programowych.', '', 50.2592, 19.0218);
+('Budynek A', 'Specjalność Bazy danych i inżynieria danych\r\n\r\nAbsolwenci specjalności będą potrafili wykorzystać posiadane umiejętności i wiedzę do realizacji zadań związanych z szeroko rozumianym przetwarzaniem danych oraz eksploracją danych i pozyskiwaniem wiedzy z różnorodnych danych pochodzących ze zróżnicowanych źródeł.', 'b', 50.2593, 19.0444),
+('Budynek B', 'GRAFIKA I MULTIMEDIA\r\n\r\nCelem kursu jest zapoznanie studentów z podstawami wybranych aspektów grafiki komputerowej i multimediów m.in. historią grafiki komputerowej, podstawami postrzegania, teorią barw i elementami estetyki, podstawami zapisu i obróbki dźwięku oraz materiałów wideo.', '', 50.2598, 19.0458),
+('Budynek E', 'Specjalność Programowanie gier i aplikacji mobilnych (PGAMO) jest kontynuowania na drugim stopniu studiów w formie specjalności Gry i aplikacje mobilne (GIAM).', '', 50.2588, 19.0459),
+('Budynek F', 'Specjalność Bazy danych i inżynieria danych (BDID) jest kontynuowania na drugim stopniu studiów w formie specjalności Analiza dużych zbiorów danych (ADZD).', 'b', 50.2601, 19.0425),
+('Budynek N', 'WPROWADZENIE DO PROGRAMOWANIA GIER\r\n\r\nCelem przedmiotu jest zapoznanie studentów z podstawowymi możliwościom programowania gier w środowisku UNITY 3D', '', 50.2536, 19.0023),
+('Centrum Informacji Naukowej i Biblioteka Akademick', 'MODELOWANIE DANYCH\r\n\r\n\r\nPrzedstawienie studentom wiedzy dotyczącej logiki procesu tworzenia baz danych oraz zakresu prac realizowanych na poszczególnych etapach modelowania relacyjnych baz danych.\r\nNabycie przez studentów umiejętności tworzenia modeli i prostych projektów baz danych.\r\nWykształcenie kompetencji społecznych związanych z tworzeniem rozwiązań informatycznych.', 'b', 50.2608, 19.0298),
+('Centrum Nowoczesnych Technologii Informatycznych', 'Absolwenci specjalności Programowanie gier i aplikacji mobilnych posiądą umiejętności w zakresie tworzenia i programowania gier komputerowych (ze szczególnym uwzględnieniem gier strategicznych i edukacyjnych) oraz projektowania i programowania aplikacji mobilnych. Podstawowe kompetencje studenta obejmować będą wykorzystanie silników gier, projektowanie interfejsów gier a w szczególności, programowanie na różne platformy programowo-sprzętowe w takich językach jak: C#, Java, Python czy JavaScript.', '', 50.2603, 19.0451),
+('Dworzec Katowice', 'PROGRAMOWANIE W JĘZYKU JAVA\r\n\r\nStudenci powinni zdobyć umiejętność praktycznego programowania w języku JAVA\r\nStudenci powinni nabyć kompetencje w zakresie przygotowania, implementacji, oraz testowania systemów wykonywanych z wykorzystaniem języka JAVA', '', 50.257, 19.0163),
+('Planeta kotleta', 'PROGRAMOWANIE W JĘZYKU PYTHON\r\n\r\nStudenci powinny zdobyć umiejętność praktycznego programowania w języku Python\r\nStudenci powinni nabyć wiedzę na temat bibliotek związanych z językiem Python', 'b', 50.2574, 19.0329),
+('Rektorat UE', 'PRZETWARZANIE DANYCH W ŚRODOWISKACH LOKALNYCH specka bazy\r\n\r\nPoznanie funkcjonowania bazodanowych aplikacji lokalnych.\r\nZdobycie praktycznych umiejętności projektowania i implementowania prostej bazy danych, jej interfejsu i sposobu działania.\r\nZamodelowanie w oprogramowaniu MS Access prostej bazy danych (składającej się z kilku tabel).', 'b', 50.2585, 19.0447);
 
 -- --------------------------------------------------------
 
@@ -70,8 +69,10 @@ CREATE TABLE `user` (
 
 INSERT INTO `user` (`user_name`, `password`, `points`) VALUES
 ('1', 'c4ca4238a0b923820dcc509a6f75849b', 50),
-('2', 'c4ca4238a0b923820dcc509a6f75849b', 120),
-('3', 'c4ca4238a0b923820dcc509a6f75849b', 150);
+('alek', 'c4ca4238a0b923820dcc509a6f75849b', 200),
+('user1', 'c4ca4238a0b923820dcc509a6f75849b', 150),
+('user2', 'c4ca4238a0b923820dcc509a6f75849b', 200),
+('user3', 'c4ca4238a0b923820dcc509a6f75849b', 150);
 
 -- --------------------------------------------------------
 
@@ -90,7 +91,16 @@ CREATE TABLE `visited` (
 --
 
 INSERT INTO `visited` (`user_name`, `title_name`, `visited_time`) VALUES
-('1', 'Budynek A', '2020-12-21 19:42:38');
+('user1', 'Budynek A', '2020-12-21 19:42:38'),
+('user1', 'Centrum Nowoczesnych Technologii Informatycznych', '2021-01-18 11:30:12'),
+('user1', 'Budynek B', '2021-01-18 11:30:23'),
+('alek', 'Budynek B', '2021-01-25 11:01:32'),
+('alek', 'Budynek A', '2021-01-25 11:02:35'),
+('alek', 'Rektorat UE', '2021-01-25 11:10:38'),
+('alek', 'Budynek E', '2021-01-25 11:11:11'),
+('alek', 'Centrum Nowoczesnych Technologii Informatycznych', '2021-01-25 11:11:42'),
+('alek', 'Budynek F', '2021-01-25 11:12:22'),
+('1', 'Budynek B', '2021-01-26 12:22:25');
 
 --
 -- Indeksy dla zrzutów tabel
